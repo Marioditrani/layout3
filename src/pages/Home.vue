@@ -1,54 +1,17 @@
 
 <script >
+
   
   export default {
+    
+    components:{},
     data(){
     return{
-        obs:1,
-            carouselMain:[
-                {
-                    
-                },
-                {
-                    img : "../assets/img/bigimage.png",
-                    paragrafo : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error alias, molestiae iusto at magnam cumque exercitationem est culpa quae tempore maxime sed accusantium officia minima consectetur. Distinctio quaerat dolorem soluta!",
-                    link : "PRENOTA TAVOLO",
-                    titolo : "Titolo paragrafo1",
-                },
-                {
-                    img : "",
-                    paragrafo : "ipsum dolor sit amet consectetur adipisicing elit. Error alias, molestiae iusto at magnam cumque exercitationem est culpa quae tempore maxime sed accusantium officia minima consectetur. Distinctio quaerat dolorem soluta!",
-                    link : "MENU",
-                    titolo : "Titolo paragrafo2",
-                },
-                {
-                    img : "",
-                    paragrafo : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error alias, molestiae iusto at magnam cumque exercitationem est culpa quae tempore maxime sed accusantium officia minima consectetur. Distinctio quaerat dolorem soluta!",
-                    link : "PRENOTA D'ASPORTO",
-                    titolo : "Titolo paragrafo3",
-                }
-            ]
+        
     }
   },
   methods: {
-    imgright(){
-        if(this.obs == 3){
-            this.obs = 1
-        }else{
-            this.obs ++
-        } 
-       
-    },
-    imgleft(){
-        if(this.obs == 1){
-            this.obs = 3
-            
-        }else{
-            this.obs --
-            
-        }
-            
-     }
+   
     },
 
   
@@ -57,165 +20,180 @@
 
 
 <template>
-
-<main>
-    <div class="top">
-        <p class="alert">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos animi dolore ullam tenetur dolorum. Omnis, earum ipsum? Atque autem molestias velit accusamus veniam, ipsam ad magni? Nesciunt cum debitis delectus!</p>
-
-    </div>
-    <div class="bottom">
-        <div class="left-home">
-            <h2>titolo paragrafo</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo maiores quasi fugit. Sit maiores facilis dolorum saepe et magnam veniam! Quas reiciendis qui deserunt rerum ducimus suscipit, necessitatibus expedita ratione?</p>
-            <span class="button">prenota</span>
-        </div>
-        <div class="right-home">
-            <h2>titolo paragrafo</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo maiores quasi fugit. Sit maiores facilis dolorum saepe et magnam veniam! Quas reiciendis qui deserunt rerum ducimus suscipit, necessitatibus expedita ratione?</p>
-            <span class="button">prenota</span>
-        </div>
-    </div>
-    <div class="info">
-        <div class="orari">
-                  <h4>Orari d'apertura</h4>
-                  <div class="cont">
-
-                      <div class="cont-giorni">
-                          <span>lunedì</span>
-                          <span>martedì - domenica</span>
-                      </div>
-                      <div class="cont-orari">
-                        <span class="time" >chiusi</span>         
-                        <span class="time" >16:00 - 22:00</span>
-                      </div>
-                  </div>
+    <main>
+        <div class="header">
+            <div class="left-header">
+                <div class="logo"></div>
+                <h1 class="title">Nome Locale</h1>
+            </div>
+            <div class="right-header">
+                <div class="nav">
+                    <router-link :to="{ name: 'home' }" class="link" >home</router-link>
+                    <router-link :to="{ name: 'prenotaServizio' }" class="link"  >prenota tavolo</router-link>
+                    <router-link :to="{ name: 'prenota' }" class="link"  >prenota asporto</router-link>
+                    <router-link :to="{ name: 'chi-siamo' }" class="link"  >chi siamo</router-link>
+                    <router-link :to="{ name: 'Contatti' }" class="link"  >contatti</router-link>
+                    <router-link :to="{ name: 'menu' }" class="link"  >menu</router-link>
                 </div>
-        <div class="dove">
-            <div class="top">
-                <h4>dove trovarci</h4>
-            </div>
-            <div class="bottom">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-pin-map-fill" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8z"/>
-                <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z"/>
-                </svg>
-                <span>Via lorem ipsum 12, 34900 Citta</span>
             </div>
         </div>
-    </div>
-    
-
-    
-</main>
-  
+        <div class="center-home">
+            <div class="top-center">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur, quo eos? Accusantium, neque temporibus. Magni aliquid aspernatur temporibus nemo, ipsam, quidem numquam cupiditate quo labore ut eligendi sequi libero voluptatum.</p>
+            </div>
+            <div class="bottom-center">
+                <div class="left-center">
+                    <h2>titolo paragrafo</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum animi omnis debitis provident, cupiditate iure porro enim eum similique quia eos maiores blanditiis accusamus, sit commodi quaerat iste optio unde!</p>
+                    <span class="button">prenota</span>
+                </div>
+                <div class="right-center">
+                    <h2>titolo paragrafo</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum animi omnis debitis provident, cupiditate iure porro enim eum similique quia eos maiores blanditiis accusamus, sit commodi quaerat iste optio unde!</p>
+                    <span class="button">prenota</span>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-home">
+            <div class="left-bottom"></div>
+            <div class="right-bottom"></div>
+        </div>
+    </main>
 </template>
 
 <style lang="scss" scoped>
 @use '../assets/styles/general.scss' as *;
 
 
+main::before{
+  content:' ';
+  position: fixed;
+  inset: 0;
+  z-index: -1000;
+  height: 100%;
+  width: 100vw;
+  background: url('../assets/img/bigimage.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
 main{
-    background: url('../assets/img/bigimage.png');
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 4rem;
-
-    .alert{
-        background-color: #585353;
-        padding: 2rem;
-        border-radius: 20px;
-        width: 70%;
-        margin: auto;
-        margin-top: 2rem;
-    }
-    .bottom{
-        display: flex;
-        width: 90%;
-        gap: 4rem;
-        
-        h2{
-            text-transform: uppercase;
-        }
-        .button{
-            background-color: white;
-            width: 20%;
-            display: flex;
-            justify-content: center;
-            padding: 1rem 6rem;
-            align-self: center;
-            margin-top: 1rem;
-            color: black;
-        }
-        .left-home,.right-home{
-            color: white;
-            background-color: $c-paragrafo;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            justify-content: space-between;
-        }
-        .left-home{
-            padding: 4rem;
-            height: 80%;
-            width: 58%;
-            h
-            p{
-                width: 95%;
-                font-size: 20px;
-            }
-        }
-        .right-home{
-            width: 42%;
-            padding: 8rem 4rem;
-            p{
-                width: 95%;
-                font-size: 20px;
-            }
-        }
-
-        
-    }
-    .info{
-        width: 100%;
+    gap: 2rem;
+    .header{
+        background-color: rgba(0, 0, 0, 0.575);
+        padding: 1.5rem;
+        margin-top: 1rem;
         display: flex;
         justify-content: space-between;
-        h4{
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            text-align: center;
-        }
-        .orari,.dove{
-            background-color:#3b3737;
-            padding: 1rem;
-            color: white;
-        }
-        .cont{
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            gap: 2rem;
-        }
-        .cont-giorni, .cont-orari{
-            display: flex;
-            flex-direction: column;
-            padding-bottom: 1rem;
-        }
-        .cont-orari{
-            text-align: end;
-        }
-        .dove{
-            .bottom{
-                width: 100%;
+        width: 100%;
+        .left-header{
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                width: 30%;
+                justify-content: space-around;
+            .logo{
+                width: 150px;
+                aspect-ratio: 1;
+                background-color: $c-nav;
+            }
+            .title{
+               font-size: 50px;
+               text-transform: uppercase;
+               text-align: center;
+               color: white;
             }
         }
-        
-    }
+        .right-header{
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 4rem;
 
+            .nav{
+                background-color: $c-nav;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                padding: 2rem;
+            }
+            .link{
+                color: white;
+                text-transform: uppercase;
+                font-size: 25px;
+                
+            }
+        }
+
+    }
+    .center-home{
+        .top-center{
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            p{
+                width: 70%;
+                background-color: $c-nav;
+                padding: 2rem;
+                color: white;
+                font-size: 15px;
+                border-radius: 20px;
+            }
+        }
+        .bottom-center{
+            width: 95%;
+            margin: 0 auto;
+            display: flex;
+            gap: 4rem;
+            padding-top: 4rem;
+            color: white;
+            
+            .left-center{
+                background-color: #585858c0;
+                width: 60%;
+                display: flex;
+                flex-direction: column;
+                padding: 3rem;
+                gap: 1rem;
+                height: 60%;
+                .button{
+                    background-color: white;
+                    color: black;
+                    width: 20%;
+                    padding: .5rem 1rem;
+                    align-self: center;
+                    text-align: center;
+                    text-transform: uppercase;
+                    margin-top: 1rem;
+                }
+            }
+            .right-center{
+                background-color: #585858c0;
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+                padding: 6rem;
+                gap: 1rem;
+                .button{
+                    background-color: white;
+                    color: black;
+                    width: 20%;
+                    padding: .5rem 1rem;
+                    align-self: center;
+                    text-align: center;
+                    text-transform: uppercase;
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+    .bottom-home{
+        width: 100%;
+        
+
+    }
 }
 </style>

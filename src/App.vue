@@ -1,13 +1,12 @@
 <script >
   
-  import AppHeader from './components/AppHeader.vue'
- 
+  
   
   
   
 
   export default {
-  components:{  AppHeader,  }
+ 
   }
 </script>
 
@@ -15,7 +14,7 @@
 
   <div class="container">
     
-      <AppHeader class="header"/>
+    
       <router-view class="page"></router-view>
     
   </div>
@@ -30,20 +29,17 @@
 .container{
   width: 100vw;
   height: 100vh;
- 
-  .header{
-    height: 10%;
-  }
+  font-family: "Roboto", sans-serif;
+  
   .page{
-    height: 90%;
+    width: 100vw;
+
   }
  
 }
 
 @media (max-width: 1600px) {
-  .nav{
-    display: none !important;
-  }
+  
   .page{
     width: 100%!important;
   }

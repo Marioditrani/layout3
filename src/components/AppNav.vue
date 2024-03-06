@@ -2,7 +2,8 @@
 <script >
 
 export default {
-    data(){
+    
+  data(){
     return{
       sideMenuValue: 0,
       infomenu: 0,
@@ -11,24 +12,24 @@ export default {
   },
   methods: {
     openside() {
-            if (this.sideMenuValue) {
-                this.sideMenuValue = 0
-            } else {
-                this.sideMenuValue = 1
+        if (this.sideMenuValue) {
+            this.sideMenuValue = 0
+        } else {
+            this.sideMenuValue = 1
 
-            }
-            console.log(this.sideMenuValue)
-        
-        },
-        infoside() {
-            if (this.infomenu) {
-                this.infomenu = 0
-            } else {
-                this.infomenu = 1
-            }
-        },
+        }
+        console.log(this.sideMenuValue)
     
     },
+    infoside() {
+        if (this.infomenu) {
+            this.infomenu = 0
+        } else {
+            this.infomenu = 1
+        }
+    },
+    
+  },
 
   
   }
@@ -232,8 +233,8 @@ display:none;
   }
 
 header{
-  
-  background-color: $c-header;
+
+  background-color: rgba(0, 0, 0, 0.445);
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -241,7 +242,7 @@ header{
   padding: 6rem;
   text-transform: uppercase;
   z-index: 5!important;
-  height: 100%;
+  height: 200px;
   .left-header{
     display: flex;
     align-items: center;
